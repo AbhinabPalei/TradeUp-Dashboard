@@ -6,7 +6,7 @@ const Orders = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:8080http://localhost:8080/allOrders")
+      .get("https://tradeup-dashboard.onrender.com/allOrders")
       .then((res) => {
         console.log(res.data);
         setAllOrders(res.data);
