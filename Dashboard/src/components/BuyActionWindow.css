@@ -1,0 +1,149 @@
+/* === BuyActionWindow Styles === */
+
+#buy-window {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.2);
+  width: 380px;
+  padding: 22px;
+  z-index: 2000;
+  cursor: grab;
+  animation: fadeIn 0.25s ease-in-out;
+}
+
+#buy-window:active {
+  cursor: grabbing;
+}
+
+/* Inputs Section */
+.regular-order {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.inputs {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+fieldset {
+  border: 1.4px solid #cfcfcf;
+  border-radius: 8px;
+  padding: 8px;
+  width: 48%;
+  transition: border 0.2s ease;
+}
+
+fieldset:focus-within {
+  border-color: #2196f3;
+}
+
+legend {
+  font-size: 13px;
+  color: #666;
+  padding: 0 6px;
+}
+
+input[type="number"] {
+  width: 100%;
+  border: none;
+  outline: none;
+  font-size: 15px;
+  color: #222;
+  background: transparent;
+  padding: 4px 0;
+}
+
+/* Buttons Section */
+.buttons {
+  margin-top: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.buttons span {
+  font-size: 14px;
+  color: #666;
+  text-align: right;
+}
+
+.buttons div {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+/* Buttons */
+.btn {
+  text-decoration: none;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 8px 18px;
+  transition: all 0.2s ease-in-out;
+  user-select: none;
+}
+
+.btn-blue {
+  background-color: #2196f3;
+  color: #fff;
+  border: 1px solid #2196f3;
+}
+
+.btn-blue:hover {
+  background-color: #0d8ae1;
+}
+
+.btn-grey {
+  background-color: #f4f4f4;
+  color: #333;
+  border: 1px solid #ccc;
+}
+
+.btn-grey:hover {
+  background-color: #e7e7e7;
+}
+
+/* Fade animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -48%);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  #buy-window {
+    width: 90%;
+    padding: 16px;
+  }
+
+  .inputs {
+    flex-direction: column;
+  }
+
+  fieldset {
+    width: 100%;
+  }
+
+  .buttons div {
+    flex-direction: column;
+  }
+
+  .btn {
+    width: 100%;
+    text-align: center;
+  }
+}
