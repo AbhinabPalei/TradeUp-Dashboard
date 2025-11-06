@@ -10,7 +10,7 @@ const BuyActionWindow = ({ uid }) => {
   const { closeBuyWindow } = useContext(GeneralContext); 
 
   const handleBuyClick = () => {
-    axios.post("https://tradeup-dashboard.onrender.com/newOrder", {
+    axios.post("https://tradeup-backend.onrender.com/newOrder", {
       name: uid, 
       qty: stockQuantity,
       price: stockPrice,
@@ -67,4 +67,5 @@ const BuyActionWindow = ({ uid }) => {
 };
 
 export default BuyActionWindow;
+
 
