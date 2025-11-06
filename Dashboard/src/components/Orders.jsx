@@ -6,7 +6,7 @@ const Orders = () => {
 
   useEffect(() => {
     axios
-      .get("https://tradeup-backend.onrender.com/allOrders")
+      .get("http://localhost:8080http://localhost:8080/allOrders")
       .then((res) => {
         console.log(res.data);
         setAllOrders(res.data);
@@ -67,3 +67,4 @@ const Orders = () => {
 };
 
 export default Orders;
+
